@@ -11,6 +11,7 @@ public class Labyrinth {
         Labyrinth lab = new Labyrinth(SMALL_SIZE, SMALL_SIZE);
         Cell c = new Cell();
 
+        c.setWall(Cell.Direction.UP);
         c.setWall(Cell.Direction.LEFT);
         c.setWall(Cell.Direction.RIGHT);
         lab.map[0][0] = c;
@@ -52,7 +53,7 @@ public class Labyrinth {
         return lab;
     }
 
-    public Cell getCell(int x, int y) {
-        return map[x][y];
+    public Cell getCell(Coord coord) {
+        return map[coord.getX()][coord.getY()];
     }
 }
