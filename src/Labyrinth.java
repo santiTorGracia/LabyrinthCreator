@@ -11,10 +11,10 @@ public class Labyrinth {
         Labyrinth lab = new Labyrinth(SMALL_SIZE, SMALL_SIZE);
         Cell c = new Cell();
 
-        c.setWall(Cell.Direction.UP);
         c.setWall(Cell.Direction.LEFT);
         c.setWall(Cell.Direction.RIGHT);
         lab.map[0][0] = c;
+        lab.map[0][0].setWall(Cell.Direction.UP);
         lab.map[0][1] = c;
         lab.map[0][3] = c;
         lab.map[0][4] = c;
